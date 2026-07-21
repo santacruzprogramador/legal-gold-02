@@ -65,6 +65,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   color: var(--text-color);
+  line-height: 1.5;
 }
 
 a {
@@ -204,14 +205,13 @@ p {
   display: inline-block;
   margin-left: auto;
   margin-right: 1rem;
-
   padding: .5rem 1rem;
-
   border-radius: .3125rem;
-
   background: var(--color-accent, #0284c7);
   font-size: .9rem;
   text-decoration: none;
+
+  white-space: nowrap;
 }
 
 .menu-toggle {
@@ -302,9 +302,10 @@ p {
   min-height: 100vh;
   padding: 5rem 1rem 3rem;
   color: var(--text-light);
+  /* Imagen de fondo optimizada a WebP y q=50 */
   background-image:
     linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
-    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fA%3D%3D");
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=50&w=1200&fm=webp&fit=crop");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -350,7 +351,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: .15rem;
-
   padding: 0;
   margin: .5rem 0 0;
   list-style: none;
@@ -373,7 +373,8 @@ p {
 .hero-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 5 / 4;
+  /* COINCIDENCIA EXACTA con width="600" height="428" del HTML para eliminar CLS */
+  aspect-ratio: 600 / 428;
   object-fit: cover;
   object-position: center 30%;
 
@@ -390,7 +391,7 @@ p {
   padding: 1rem;
   border-radius: .75rem;
 
-  background: rgba(17, 24, 39, .65); /* Cambiado al valor RGBA de tu --bg-dark */
+  background: rgba(17, 24, 39, .65);
   color: var(--text-light);
 
   max-width: 15rem;
@@ -421,7 +422,6 @@ p {
     gap: 3rem;
   }
 
-
   .hero-content,
   .hero-image {
     flex: 1;
@@ -441,9 +441,7 @@ p {
 }
 
 /* ========== DESKTOP ========== */
-
 @media (min-width: 1024px) {
-
   .hero {
     gap: 5rem;
   }
@@ -452,11 +450,10 @@ p {
     font-size: 4rem;
   }
 
-  
-.hero-features {
-  display: flex;
-  justify-content: space-between;
-}
+  .hero-features {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /* ========== ABOUT ========== */
@@ -479,7 +476,7 @@ p {
 .about-image img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
+ /*  aspect-ratio: 4 / 3; */
   object-fit: cover;
 
   border-radius: 1rem;
