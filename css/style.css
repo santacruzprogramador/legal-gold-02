@@ -32,6 +32,16 @@
   --success: #10b981;          
   /* Verde: para confirmaciones de éxito o mensajes positivos */
 
+  /* Paleta de colores para accesibilidad (WCAG AA) */
+    --color-text-dark: #111111;      /* Texto oscuro para alto contraste */
+    --color-gold-dark: #735000;      /* Dorado accesible sobre fondo claro */
+    --color-badge-bg: #1a1a1a;       /* Fondo oscuro para destacadores */
+    --color-text-light: #ffffff;     /* Texto claro */
+
+    /* Pesos de fuente */
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
 
   --max-width: 1200px;
   --shadow-container: 0 4px 6px rgba(0, 0, 0, 0.55);
@@ -121,9 +131,7 @@ p {
   display: inline-block;
   padding: 0.6rem 1.2rem;
   background-color: var(--primary-color);
-  color: var(--text-light);
   font-size: 0.95rem;
-  font-weight: 700;
   text-align: center;
   text-decoration: none;
   border: none;
@@ -156,6 +164,15 @@ p {
     width: 100%;
     min-height: 100vh;
   }
+}
+
+/* ********** Styles site ********** */
+
+.btn, 
+.btn-nav, 
+.btn-w-50 {
+  color: var(--color-text-dark) !important;
+  font-weight: var(--fw-semibold);
 }
 
 /* ********** Barra navegación ********** */
@@ -192,10 +209,7 @@ p {
   border-radius: .3125rem;
 
   background: var(--color-accent, #0284c7);
-  color: var(--text-light);
-
   font-size: .9rem;
-  font-weight: 600;
   text-decoration: none;
 }
 
@@ -486,11 +500,9 @@ p {
 
 .about-kicker {
   margin: 0;
-
-  color: var(--accent-color);
-
+  color: var(--color-gold-dark);
+  font-weight: var(--fw-bold);
   font-size: 1.2rem;
-  font-weight: 700;
   letter-spacing: .2em;
   text-transform: uppercase;
 }
@@ -625,11 +637,9 @@ p {
   position: absolute;
   top: 1rem;
   right: 1rem;
-
+  background-color: var(--color-badge-bg);
+  color: var(--color-text-light);
   padding: .35rem .75rem;
-
-  color: var(--text-light);
-  background: var(--accent-color);
 
   border-radius: 100vmax;
 
@@ -725,10 +735,9 @@ p {
 
 .service-link {
   margin-top: auto;
+  color: var(--color-gold-dark);
+  font-weight: var(--fw-semibold);
 
-  color: var(--primary-color);
-
-  font-weight: 600;
   text-decoration: none;
 
   transition: color .25s ease;

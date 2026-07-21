@@ -61,14 +61,15 @@
     <link rel="manifest" href="assets/favicon/site.webmanifest">
   
     <!-- ===== ESTILOS ===== -->
-    <link rel="stylesheet" href="css/style.css">
-  
+    <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+      
     <!-- ===== IMAGEN PRINCIPAL ===== -->
     <link rel="preload" as="image" href="assets/images/hero.webp" fetchpriority="high">
   
     <!-- ===== unsplash  ===== -->
-    <link rel="preconnect" href="https://images.unsplash.com">
-    <link rel="preconnect" href="https://plus.unsplash.com">
+    <link rel="preconnect" href="https://plus.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="https://plus.unsplash.com">
 
     <!-- ===== DATOS ESTRUCTURADOS ===== -->
     <script type="application/ld+json">
@@ -102,376 +103,378 @@
       </nav>
     </section>
   </header>
-  
 
-  <section id="inicio" class="hero">
-    <div class="container">
-      <article class="hero-wrapper">
+  <main>
+    <section id="inicio" class="hero">
+      
+      <div class="container">
+        <article class="hero-wrapper">
 
-        <header class="hero-content">
-        
-          <h1>
-            Asesoramiento legal para personas, familias y empresas
-            <span class="hero-title-location">
-              Estudio jurídico en Av. Libertad 358, Centro. Consultas presenciales con turno y asesoramiento online.
-            </span>
-          </h1>
+          <header class="hero-content">
           
+            <h1>
+              Asesoramiento legal para personas, familias y empresas
+              <span class="hero-title-location">
+                Estudio jurídico en Av. Libertad 358, Centro. Consultas presenciales con turno y asesoramiento online.
+              </span>
+            </h1>
+            
 
-        
-          <p class="hero-description">
-            Ofrecemos orientación y representación legal con un enfoque claro, responsable y comprometido. Trabajamos para brindar respuestas eficaces y acompañarte en cada etapa de tu proceso.
-          </p>
-        
-          <a href="#contacto" class="btn btn-w-50">
-            Solicitar consulta
-          </a>
-        
-          <ul class="hero-features">
-            <li>Atención personalizada</li>
-            <li>Asesoramiento confiable</li>
-            <li>Compromiso profesional</li>
-          </ul>
-        </header>
-
-        <figure class="hero-image">
-          <img src="https://plus.unsplash.com/premium_photo-1681489930334-b0d26fdb9ed8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abogado brindando asesoría legal">
-
-          <figcaption class="hero-floating-card">
-            <strong>Profesionales matriculados</strong>
-              <p>Compromiso, ética y respaldo legal.</p>
-          </figcaption>
-        </figure>
-      </article>
-    </div>
-  
-  </section>
-
-  <section id="acerca" class="about section">
-    <div class="container">
-      <article class="about-wrapper">
-
-        <figure class="about-image">
-          <img 
-            src="https://plus.unsplash.com/premium_photo-1681489930334-b0d26fdb9ed8?q=55&w=700&fm=webp&fit=crop" 
-            alt="Abogado brindando asesoría legal" 
-            width="700" 
-            height="500" 
-            fetchpriority="high"
-            decoding="async"
-          >
-        </figure>
-  
-        <div class="about-content">
-
-          <header class="about-header">
-            <p class="about-kicker">SOBRE NOSOTROS</p>
-        
-            <h2>
-              Experiencia y compromiso para brindar soluciones de calidad
-            </h2>
-          </header>
-        
-          <p class="about-description">
-            Ofrecemos un servicio profesional basado en la confianza, la cercanía
-            y la atención personalizada. Nuestro objetivo es acompañar a cada
-            cliente con soluciones eficientes y adaptadas a sus necesidades.
-          </p>
-        
-          <div class="about-values">
-        
-            <article class="about-value">
-              <h3>Atención personalizada</h3>
-              <p>
-                Escuchamos cada caso para desarrollar estrategias claras y efectivas.
-              </p>
-            </article>
-        
-            <article class="about-value">
-              <h3>Compromiso profesional</h3>
-              <p>
-                Trabajamos con responsabilidad, transparencia y dedicación.
-              </p>
-            </article>
-        
-          </div>
-        
-          <a href="#contacto" class="btn">
-            Conocer más
-          </a>
-        
-        </div>
-  
-      </article>
-  
-    </div>
-  </section>
-
-  <section id="servicios" class="services section">
-    <div class="container">
-  
-      <header class="services-header">
-        <p class="about-kicker">SERVICIOS</p>
-
-        <h2>
-          Soluciones jurídicas para proteger sus intereses
-        </h2>
-      </header>
-  
-      <div class="services-content">
-  
-        <article class="service-card">
-          <header class="service-card-header">
-            <div class="service-icon">⚖️</div>
-  
-            <div>
-              <h3>Derecho Civil</h3>
-  
-              <p class="service-subtitle">
-                Soluciones para personas y familias.
-              </p>
-            </div>
-          </header>
-  
-          <p class="service-description-card">
-            Asesoramiento integral en conflictos civiles, responsabilidad,
-            indemnizaciones, contratos y defensa de sus derechos.
-          </p>
-  
-          <ul class="service-list">
-            <li>Consultas jurídicas</li>
-            <li>Daños y perjuicios</li>
-            <li>Contratos civiles</li>
-          </ul>
-  
-          <a href="#contacto" class="service-link">
-            Solicitar asesoramiento →
-          </a>
-        </article>
-  
-        <article class="service-card featured">
-          <span class="service-badge">Más solicitado</span>
-  
-          <header class="service-card-header">
-            <div class="service-icon">🏢</div>
-  
-            <div>
-              <h3>Derecho Empresarial</h3>
-  
-              <p class="service-subtitle">
-                Asistencia para empresas y emprendedores.
-              </p>
-            </div>
-          </header>
-  
-          <p class="service-description-card">
-            Acompañamiento legal para proteger el crecimiento de su negocio y
-            minimizar riesgos jurídicos.
-          </p>
-  
-          <ul class="service-list">
-            <li>Constitución de sociedades</li>
-            <li>Contratos comerciales</li>
-            <li>Asesoría permanente</li>
-          </ul>
-  
-          <a href="#contacto" class="service-link">
-            Solicitar asesoramiento →
-          </a>
-        </article>
-  
-        <article class="service-card">
-          <header class="service-card-header">
-            <div class="service-icon">👨‍⚖️</div>
-  
-            <div>
-              <h3>Representación Judicial</h3>
-  
-              <p class="service-subtitle">
-                Defensa profesional en tribunales.
-              </p>
-            </div>
-          </header>
-  
-          <p class="service-description-card">
-            Representación estratégica durante todas las etapas del proceso
-            judicial, priorizando resultados efectivos.
-          </p>
-  
-          <ul class="service-list">
-            <li>Demandas</li>
-            <li>Contestaciones</li>
-            <li>Seguimiento del proceso</li>
-          </ul>
-  
-          <a href="#contacto" class="service-link">
-            Solicitar asesoramiento →
-          </a>
-        </article>
-  
-        <article class="service-card">
-          <header class="service-card-header">
-            <div class="service-icon">🤝</div>
-  
-            <div>
-              <h3>Mediación</h3>
-  
-              <p class="service-subtitle">
-                Resolución rápida de conflictos.
-              </p>
-            </div>
-          </header>
-  
-          <p class="service-description-card">
-            Buscamos acuerdos eficientes que permitan evitar largos procesos
-            judiciales cuando sea posible.
-          </p>
-  
-          <ul class="service-list">
-            <li>Mediación privada</li>
-            <li>Negociaciones</li>
-            <li>Acuerdos extrajudiciales</li>
-          </ul>
-  
-          <a href="#contacto" class="service-link">
-            Solicitar asesoramiento →
-          </a>
-        </article>
-  
-        <article class="service-card">
-          <header class="service-card-header">
-            <div class="service-icon">📜</div>
-  
-            <div>
-              <h3>Contratos</h3>
-  
-              <p class="service-subtitle">
-                Seguridad jurídica para cada acuerdo.
-              </p>
-            </div>
-          </header>
-  
-          <p class="service-description-card">
-            Elaboración y revisión de contratos personalizados para proteger sus
-            intereses y prevenir futuros conflictos.
-          </p>
-  
-          <ul class="service-list">
-            <li>Redacción</li>
-            <li>Revisión legal</li>
-            <li>Negociación contractual</li>
-          </ul>
-  
-          <a href="#contacto" class="service-link">
-            Solicitar asesoramiento →
-          </a>
-        </article>
-  
-      </div>
-  
-    </div>
-  </section>
-
-  <section id="contacto" class="contact section">
-    <div class="container">
-  
-      <div class="contact-wrapper">
-  
-        <article class="contact-content">
-  
-          <header class="contact-header">
-            <p class="about-kicker">CONTACTO</p>
-  
-            <h2>
-              Solicite una consulta jurídica
-            </h2>
-  
-            <p class="contact-description">
-              Cuéntenos su situación y nos pondremos en contacto a la brevedad para
-              brindarle un asesoramiento profesional y personalizado.
+          
+            <p class="hero-description">
+              Ofrecemos orientación y representación legal con un enfoque claro, responsable y comprometido. Trabajamos para brindar respuestas eficaces y acompañarte en cada etapa de tu proceso.
             </p>
+          
+            <a href="#contacto" class="btn btn-w-50">
+              Solicitar consulta
+            </a>
+          
+            <ul class="hero-features">
+              <li>Atención personalizada</li>
+              <li>Asesoramiento confiable</li>
+              <li>Compromiso profesional</li>
+            </ul>
           </header>
-  
-          <ul class="contact-info">
-            <li>
-              <strong>📍 Dirección</strong>
-              <span>Av. Principal 123, Canning</span>
-            </li>
-  
-            <li>
-              <strong>📞 Teléfono</strong>
-              <span>+54 9 11 1234-5678</span>
-            </li>
-  
-            <li>
-              <strong>✉️ Correo</strong>
-              <span>contacto@estudio.com</span>
-            </li>
-  
-            <li>
-              <strong>🕒 Horarios</strong>
-              <span>Lunes a Viernes de 9:00 a 18:00 hs.</span>
-            </li>
-          </ul>
-  
+
+          <figure class="hero-image">
+            <img src="https://plus.unsplash.com/premium_photo-1681489930334-b0d26fdb9ed8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abogado brindando asesoría legal">
+
+            <figcaption class="hero-floating-card">
+              <strong>Profesionales matriculados</strong>
+                <p>Compromiso, ética y respaldo legal.</p>
+            </figcaption>
+          </figure>
         </article>
-  
-        <form class="contact-form">
-  
-          <div class="form-group">
-            <label for="name">Nombre completo</label>
-  
-            <input
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Ingrese su nombre"
-              required>
-          </div>
-  
-          <div class="form-group">
-            <label for="email">Correo electrónico</label>
-  
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="ejemplo@email.com"
-              required>
-          </div>
-  
-          <div class="form-group">
-            <label for="phone">Teléfono</label>
-  
-            <input
-              id="phone"
-              type="tel"
-              name="phone"
-              placeholder="+54 9..."
-              required>
-          </div>
-  
-          <div class="form-group">
-            <label for="message">Consulta</label>
-  
-            <textarea
-              id="message"
-              name="message"
-              rows="5"
-              placeholder="Describa brevemente su consulta..."
-              required></textarea>
-          </div>
-  
-          <button class="btn" type="submit">
-            Enviar consulta
-          </button>
-  
-        </form>
-  
       </div>
-  
-    </div>
-  </section>
+    
+    </section>
+
+    <section id="acerca" class="about section">
+      <div class="container">
+        <article class="about-wrapper">
+
+          <figure class="about-image">
+            <img 
+              src="https://plus.unsplash.com/premium_photo-1681489930334-b0d26fdb9ed8?q=55&w=700&fm=webp&fit=crop" 
+              alt="Abogado brindando asesoría legal" 
+              width="700" 
+              height="500" 
+              fetchpriority="high"
+              decoding="async"
+            >
+          </figure>
+    
+          <div class="about-content">
+
+            <header class="about-header">
+              <p class="about-kicker">SOBRE NOSOTROS</p>
+          
+              <h2>
+                Experiencia y compromiso para brindar soluciones de calidad
+              </h2>
+            </header>
+          
+            <p class="about-description">
+              Ofrecemos un servicio profesional basado en la confianza, la cercanía
+              y la atención personalizada. Nuestro objetivo es acompañar a cada
+              cliente con soluciones eficientes y adaptadas a sus necesidades.
+            </p>
+          
+            <div class="about-values">
+          
+              <article class="about-value">
+                <h3>Atención personalizada</h3>
+                <p>
+                  Escuchamos cada caso para desarrollar estrategias claras y efectivas.
+                </p>
+              </article>
+          
+              <article class="about-value">
+                <h3>Compromiso profesional</h3>
+                <p>
+                  Trabajamos con responsabilidad, transparencia y dedicación.
+                </p>
+              </article>
+          
+            </div>
+          
+            <a href="#contacto" class="btn">
+              Conocer más
+            </a>
+          
+          </div>
+    
+        </article>
+    
+      </div>
+    </section>
+
+    <section id="servicios" class="services section">
+      <div class="container">
+    
+        <header class="services-header">
+          <p class="about-kicker">SERVICIOS</p>
+
+          <h2>
+            Soluciones jurídicas para proteger sus intereses
+          </h2>
+        </header>
+    
+        <div class="services-content">
+    
+          <article class="service-card">
+            <header class="service-card-header">
+              <div class="service-icon">⚖️</div>
+    
+              <div>
+                <h3>Derecho Civil</h3>
+    
+                <p class="service-subtitle">
+                  Soluciones para personas y familias.
+                </p>
+              </div>
+            </header>
+    
+            <p class="service-description-card">
+              Asesoramiento integral en conflictos civiles, responsabilidad,
+              indemnizaciones, contratos y defensa de sus derechos.
+            </p>
+    
+            <ul class="service-list">
+              <li>Consultas jurídicas</li>
+              <li>Daños y perjuicios</li>
+              <li>Contratos civiles</li>
+            </ul>
+    
+            <a href="#contacto" class="service-link">
+              Solicitar asesoramiento →
+            </a>
+          </article>
+    
+          <article class="service-card featured">
+            <span class="service-badge">Más solicitado</span>
+    
+            <header class="service-card-header">
+              <div class="service-icon">🏢</div>
+    
+              <div>
+                <h3>Derecho Empresarial</h3>
+    
+                <p class="service-subtitle">
+                  Asistencia para empresas y emprendedores.
+                </p>
+              </div>
+            </header>
+    
+            <p class="service-description-card">
+              Acompañamiento legal para proteger el crecimiento de su negocio y
+              minimizar riesgos jurídicos.
+            </p>
+    
+            <ul class="service-list">
+              <li>Constitución de sociedades</li>
+              <li>Contratos comerciales</li>
+              <li>Asesoría permanente</li>
+            </ul>
+    
+            <a href="#contacto" class="service-link">
+              Solicitar asesoramiento →
+            </a>
+          </article>
+    
+          <article class="service-card">
+            <header class="service-card-header">
+              <div class="service-icon">👨‍⚖️</div>
+    
+              <div>
+                <h3>Representación Judicial</h3>
+    
+                <p class="service-subtitle">
+                  Defensa profesional en tribunales.
+                </p>
+              </div>
+            </header>
+    
+            <p class="service-description-card">
+              Representación estratégica durante todas las etapas del proceso
+              judicial, priorizando resultados efectivos.
+            </p>
+    
+            <ul class="service-list">
+              <li>Demandas</li>
+              <li>Contestaciones</li>
+              <li>Seguimiento del proceso</li>
+            </ul>
+    
+            <a href="#contacto" class="service-link">
+              Solicitar asesoramiento →
+            </a>
+          </article>
+    
+          <article class="service-card">
+            <header class="service-card-header">
+              <div class="service-icon">🤝</div>
+    
+              <div>
+                <h3>Mediación</h3>
+    
+                <p class="service-subtitle">
+                  Resolución rápida de conflictos.
+                </p>
+              </div>
+            </header>
+    
+            <p class="service-description-card">
+              Buscamos acuerdos eficientes que permitan evitar largos procesos
+              judiciales cuando sea posible.
+            </p>
+    
+            <ul class="service-list">
+              <li>Mediación privada</li>
+              <li>Negociaciones</li>
+              <li>Acuerdos extrajudiciales</li>
+            </ul>
+    
+            <a href="#contacto" class="service-link">
+              Solicitar asesoramiento →
+            </a>
+          </article>
+    
+          <article class="service-card">
+            <header class="service-card-header">
+              <div class="service-icon">📜</div>
+    
+              <div>
+                <h3>Contratos</h3>
+    
+                <p class="service-subtitle">
+                  Seguridad jurídica para cada acuerdo.
+                </p>
+              </div>
+            </header>
+    
+            <p class="service-description-card">
+              Elaboración y revisión de contratos personalizados para proteger sus
+              intereses y prevenir futuros conflictos.
+            </p>
+    
+            <ul class="service-list">
+              <li>Redacción</li>
+              <li>Revisión legal</li>
+              <li>Negociación contractual</li>
+            </ul>
+    
+            <a href="#contacto" class="service-link">
+              Solicitar asesoramiento →
+            </a>
+          </article>
+    
+        </div>
+    
+      </div>
+    </section>
+
+    <section id="contacto" class="contact section">
+      <div class="container">
+    
+        <div class="contact-wrapper">
+    
+          <article class="contact-content">
+    
+            <header class="contact-header">
+              <p class="about-kicker">CONTACTO</p>
+    
+              <h2>
+                Solicite una consulta jurídica
+              </h2>
+    
+              <p class="contact-description">
+                Cuéntenos su situación y nos pondremos en contacto a la brevedad para
+                brindarle un asesoramiento profesional y personalizado.
+              </p>
+            </header>
+    
+            <ul class="contact-info">
+              <li>
+                <strong>📍 Dirección</strong>
+                <span>Av. Principal 123, Canning</span>
+              </li>
+    
+              <li>
+                <strong>📞 Teléfono</strong>
+                <span>+54 9 11 1234-5678</span>
+              </li>
+    
+              <li>
+                <strong>✉️ Correo</strong>
+                <span>contacto@estudio.com</span>
+              </li>
+    
+              <li>
+                <strong>🕒 Horarios</strong>
+                <span>Lunes a Viernes de 9:00 a 18:00 hs.</span>
+              </li>
+            </ul>
+    
+          </article>
+    
+          <form class="contact-form">
+    
+            <div class="form-group">
+              <label for="name">Nombre completo</label>
+    
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Ingrese su nombre"
+                required>
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Correo electrónico</label>
+    
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="ejemplo@email.com"
+                required>
+            </div>
+    
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+    
+              <input
+                id="phone"
+                type="tel"
+                name="phone"
+                placeholder="+54 9..."
+                required>
+            </div>
+    
+            <div class="form-group">
+              <label for="message">Consulta</label>
+    
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Describa brevemente su consulta..."
+                required></textarea>
+            </div>
+    
+            <button class="btn" type="submit">
+              Enviar consulta
+            </button>
+    
+          </form>
+    
+        </div>
+    
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
